@@ -28,31 +28,31 @@ El proyecto implementa una validación simple de usuarios y contraseñas que se 
 - Crear una base de datos en MySQL, por ejemplo, login_db.
 - Crear una tabla llamada usuario con la siguiente estructura:
 
-CREATE TABLE usuario (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombreUsuario VARCHAR(50) NOT NULL,
-    contrasenia VARCHAR(50) NOT NULL
-);
+      CREATE TABLE usuario (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          nombreUsuario VARCHAR(50) NOT NULL,
+          contrasenia VARCHAR(50) NOT NULL
+      );
 
 Insertar manualmente algunos usuarios para las pruebas:
 
-INSERT INTO usuario (nombreUsuario, contrasenia) 
-VALUES ('admin', '1234'), ('user1', 'pass1'), ('user2', 'pass2');
+      INSERT INTO usuario (nombreUsuario, contrasenia) 
+      VALUES ('admin', '1234'), ('user1', 'pass1'), ('user2', 'pass2');
 
 Configurar el archivo persistence.xml para conectar el proyecto con la base de datos:
 
-<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
-    <persistence-unit name="loginPU">
-        <class>com.masbytes.login.logica.Usuario</class>
-        <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/login_db" />
-            <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="tu_contraseña" />
-            <property name="javax.persistence.schema-generation.database.action" value="none" />
-        </properties>
-    </persistence-unit>
-</persistence>
+      <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+          <persistence-unit name="loginPU">
+              <class>com.masbytes.login.logica.Usuario</class>
+              <properties>
+                  <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+                  <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/login_db" />
+                  <property name="javax.persistence.jdbc.user" value="root" />
+                  <property name="javax.persistence.jdbc.password" value="tu_contraseña" />
+                  <property name="javax.persistence.schema-generation.database.action" value="none" />
+              </properties>
+          </persistence-unit>
+      </persistence>
               
 # Estructura del Proyecto
 
@@ -67,7 +67,7 @@ El proyecto está organizado de la siguiente forma:
 
 - Clona el repositorio:
 
-      git clone https://github.com/tu_usuario/nombre_del_repositorio.git
+      git clone https://github.com/MasBytesDev/sistema-login-java
 
 - Abre el proyecto en Apache NetBeans o tu IDE preferido.
 
