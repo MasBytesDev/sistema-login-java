@@ -1,0 +1,9 @@
+C:\wspaces\netbeans\login\src\main\java\com\masbytes\login\igu\Principal.java
+C:\wspaces\netbeans\login\src\main\java\com\masbytes\login\logica\Controladora.java
+C:\wspaces\netbeans\login\src\main\java\com\masbytes\login\logica\Usuario.java
+C:\wspaces\netbeans\login\src\main\java\com\masbytes\login\Login.java
+C:\wspaces\netbeans\login\src\main\java\com\masbytes\login\persistencia\ControladoraPersistencia.java
+C:\wspaces\netbeans\login\src\main\java\com\masbytes\login\persistencia\exceptions\IllegalOrphanException.java
+C:\wspaces\netbeans\login\src\main\java\com\masbytes\login\persistencia\exceptions\NonexistentEntityException.java
+C:\wspaces\netbeans\login\src\main\java\com\masbytes\login\persistencia\exceptions\PreexistingEntityException.java
+C:\wspaces\netbeans\login\src\main\java\com\masbytes\login\persistencia\UsuarioJpaController.java
