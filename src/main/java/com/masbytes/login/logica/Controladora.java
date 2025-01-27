@@ -11,7 +11,9 @@ public class Controladora {
         controlPersis = new ControladoraPersistencia();
     }
 
-    public String validarUsuario(String usuario, String contrasenia) {
+    public Usuario validarUsuario(String usuario, String contrasenia) {
+        
+        Usuario usr = null;
         List<Usuario> listaUsuarios = controlPersis.traerUsuarios();
 
         // Recorremos toda la lista de usuarios
@@ -20,14 +22,16 @@ public class Controladora {
             if (usu.getNombreUsuario().equals(usuario)) {
                 // Verificamos la contraseña
                 if (usu.getContrasenia().equals(contrasenia)) {
-                    return "Usuario y Contraseña Válidos. ¡Bienvenido!";
+                    usr = usu;
+                    return usr;
                 } else {
-                    return "Contraseña Incorrecta!!";
-                }
+                    usr = null;
+                    return usr;
+                } 
             }
         }
         // Si terminamos el bucle y no encontramos coincidencias
-        return "Usuario Incorrecto!!";
-    }
+        return usr;
+    }    
 
 }
