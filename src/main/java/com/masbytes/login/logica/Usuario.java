@@ -5,25 +5,35 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Usuario implements Serializable {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nombreUsuario;
     private String contrasenia;
 
+    @ManyToOne
+    @JoinColumn(name = "fk_rol")
+    private Rol unRol;
+
+    //  No args constructor
     public Usuario() {
     }
 
-    public Usuario(int id, String nombreUsuario, String contrasenia) {
+    //  With args constructor
+    public Usuario(int id, String nombreUsuario, String contrasenia, Rol unRol) {
         this.id = id;
         this.nombreUsuario = nombreUsuario;
         this.contrasenia = contrasenia;
+        this.unRol = unRol;
     }
 
+    //  Getter & Setter Methods
     public int getId() {
         return id;
     }
@@ -47,7 +57,13 @@ public class Usuario implements Serializable {
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
-    
-    
-    
+
+    public Rol getUnRol() {
+        return unRol;
+    }
+
+    public void setUnRol(Rol unRol) {
+        this.unRol = unRol;
+    }
+
 }
