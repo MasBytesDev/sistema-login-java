@@ -3,8 +3,8 @@ package com.masbytes.login.logica;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+/* import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType; */
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 public class Rol implements Serializable {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nombreRol;
     private String descripcion;

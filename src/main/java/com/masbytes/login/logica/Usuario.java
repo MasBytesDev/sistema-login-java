@@ -2,8 +2,8 @@ package com.masbytes.login.logica;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+/* import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType; */
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 public class Usuario implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nombreUsuario;
     private String contrasenia;
