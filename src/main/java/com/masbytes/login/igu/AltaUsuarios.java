@@ -3,6 +3,8 @@ package com.masbytes.login.igu;
 import com.masbytes.login.logica.Controladora;
 import com.masbytes.login.logica.Rol;
 import java.util.List;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 public class AltaUsuarios extends javax.swing.JFrame {
     
@@ -155,8 +157,21 @@ public class AltaUsuarios extends javax.swing.JFrame {
         String rol = (String) cmbRol.getSelectedItem();
         
         control.crearUsuario(usuario, contra, rol);
+        
+        mostrarMensaje("Usuario creado exitosamente.", "Info", "Creacion Exitosa.");
     }//GEN-LAST:event_btnGuardarActionPerformed
-    
+        
+    public void mostrarMensaje(String mensaje, String tipo, String titulo) {
+        JOptionPane optionPane = new JOptionPane(mensaje);
+        if (tipo.equals("Info")) {
+            optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        } else if (tipo.equals("Error")) {
+            optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+        }
+        JDialog dialog = optionPane.createDialog(titulo);
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
+    }    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;

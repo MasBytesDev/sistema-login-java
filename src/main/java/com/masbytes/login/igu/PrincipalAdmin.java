@@ -202,7 +202,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
     }
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        // TODO add your handling code here:
+        //  TO-DO
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void bntNuevoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntNuevoUsuarioActionPerformed
